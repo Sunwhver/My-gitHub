@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- Cabeçalho -->
+  <!-- cabeçalho -->
   <header class="header-git">
     <div class="container menu-git">
       <a href="#" class="logo-git">
@@ -25,8 +25,28 @@
     </div>
   </header>
 
+  <!-- Sessão do Notion -->
+  <section class="intro-git">
+    <div class="container">
+      <div class="intro-layout">
+        <div class="intro-texto">
+          <h1 style="line-height: 120%;">Notion explicativo da<br> <span class="highlight">construção do trabalho</span></h1>
+          <p style="margin-bottom: 20px;">Página no Notion com a pesquisa completa sobre Git e GitHub, e o relatório de construção dessa página. Acesse através dos botões abaixo. Boa leitura e bom entendimento!</p>
+          <a href="https://www.notion.so/P-gina-est-tica-HTML-265d302f6f57809da447e073810ee6c6?pvs=97#267d302f6f5780a08179fce63b85288c" class="btn-roteiro">Ver pesquisa</a>
+          <a href="https://www.notion.so/P-gina-est-tica-HTML-265d302f6f57809da447e073810ee6c6?source=copy_link" class="btn-relatorio">Ver relatório</a>
+        </div>
+
+        <div class="intro-imagem">
+          <img src="imagens/capa_morangolandia.jpg"
+               alt="várias imagens de cesta com morangos, sorvete, bolinho, e vários doces de morango"
+               style="width:100%; height:100%; object-fit:cover; border-radius: var(--radius); display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- rodapé -->
-  <footer class="rodape-git">
+ <footer class="rodape-git">
     <div class="container">
       <p class="informacao-git">© <span id="year"></span> Diana Alves Zamprogna <br>Aluna do quarto período do curso de Sistemas de Informação da universidade MaterDei</p>
     </div>
@@ -42,7 +62,7 @@
       });
     }
   </script>
-</body>
+
   <style>
     :root{
       --bordo:#7A1F2B;
@@ -67,7 +87,7 @@
       padding-right:40px;
     }
 
-    /* Botões principais */
+    /* botões principais */
     .btn-primary{
       background:var(--bordo); color:var(--bege);
       padding:10px 20px; border-radius:40px;
@@ -75,7 +95,14 @@
     }
     .btn-primary:hover{opacity:.9}
 
-    /* Cabeçalho */
+    .btn-roteiro,.btn-relatorio{
+      background:var(--bordo); color:var(--bege);
+      padding:8px 18px; border-radius:30px; font-size:13px;
+      font-weight:bold; display:inline-block; margin-right:6px
+    }
+    .btn-roteiro:hover,.btn-relatorio:hover{opacity:.85}
+
+    /* cabeçalho */
     .header-git{
       padding:0 40px;
       background:var(--bege); position:sticky; top:0; z-index:10;
@@ -94,8 +121,14 @@
     .nav-toggle{display:none; flex-direction:column; gap:4px; background:none; border:0; cursor:pointer}
     .nav-toggle .bar{width:25px; height:3px; background:var(--cinza-escuro)}
 
-    /* Rodapé */
-    .rodape-git{
+    /* Intro */
+    .intro-git{background:var(--rosa); padding:25px 0}
+    .intro-layout{display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center}
+    .intro-texto h1 .highlight{color:var(--bordo)}
+    .intro-imagem{width:100%; height:400px; border-radius:var(--radius); background:var(--cinza-claro); overflow:hidden}
+
+    /* rodapé */
+    .rodape-git {
       background:var(--bordo);
       padding:12px;
       text-align:center;
@@ -106,12 +139,12 @@
       color: var(--cinza-claro);
     }
 
-
     /* responsivo */
     @media (max-width:768px){
       .nav-toggle{display:flex}
       .links-git{display:none; flex-direction:column; gap:8px; background:var(--rosa); padding:12px}
     }
   </style>
+
+</body>
 </html>
- 
