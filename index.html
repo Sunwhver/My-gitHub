@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página sobre Git e GitHub</title>
+  <meta name="description" content="Página HTML estática sobre Git e GitHub" />
+  <link type="image/png" sizes="96x96" rel="icon" href="imagens/icone_morango.png">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="header-git">
+    <div class="container menu-git">
+      <a href="#" class="logo-git">
+        <img src="imagens/icone_morango.png" alt="ícone de morango" class="logo-icon">
+        <p>Git<span>Hub</span></p>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="links-git">
+        <p class="projeto">Projeto integrador</p>
+      </nav>
+    </div>
+  </header>
+
+  <!-- rodapé -->
+  <footer class="rodape-git">
+    <div class="container">
+      <p class="informacao-git">© <span id="year"></span> Diana Alves Zamprogna <br>Aluna do quarto período do curso de Sistemas de Informação da universidade MaterDei</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".links-git");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
+  </script>
+</body>
+  <style>
+    :root{
+      --bordo:#7A1F2B;
+      --rosa:#F8C8DC;
+      --cinza-claro:#EDEDED;
+      --cinza-escuro:#333333;
+      --bege:#FAFAF0;
+      --radius:16px;
+      --shadow:0 6px 20px rgba(0,0,0,.08);
+    }
+
+    *{margin:0; padding:0; box-sizing:border-box}
+    body{font-family:Arial, sans-serif; color:var(--cinza-escuro); background:var(--bege); line-height:1.6}
+    a{text-decoration:none}
+
+    /* container geral */
+    .container{
+      max-width:1100px;
+      width:100%;
+      margin:0 auto;
+      padding-left:40px;
+      padding-right:40px;
+    }
+
+    /* Botões principais */
+    .btn-primary{
+      background:var(--bordo); color:var(--bege);
+      padding:10px 20px; border-radius:40px;
+      font-weight:bold; font-size:14px; display:inline-block
+    }
+    .btn-primary:hover{opacity:.9}
+
+    /* Cabeçalho */
+    .header-git{
+      padding:0 40px;
+      background:var(--bege); position:sticky; top:0; z-index:10;
+      box-shadow:0 1px 4px rgba(0,0,0,.1)
+    }
+    .menu-git{display:flex; justify-content:space-between; align-items:center; padding:8px 0}
+    .logo-git{
+      font-weight:bold; font-size:18px; color:var(--bordo);
+      display:flex; align-items:center; gap:8px;
+    }
+    .logo-git span{color:var(--cinza-escuro)}
+    .logo-icon{width:24px; height:24px; display:inline-block}
+    .links-git{display:flex; gap:12px; align-items:center}
+    .links-git .projeto{font-size:14px; font-weight:bold; color:var(--bordo)}
+    .links-git.open{display:block}
+    .nav-toggle{display:none; flex-direction:column; gap:4px; background:none; border:0; cursor:pointer}
+    .nav-toggle .bar{width:25px; height:3px; background:var(--cinza-escuro)}
+
+    /* Rodapé */
+    .rodape-git{
+      background:var(--bordo);
+      padding:12px;
+      text-align:center;
+      font-size:12px;
+    }
+
+    .informacao-git {
+      color: var(--cinza-claro);
+    }
+
+
+    /* responsivo */
+    @media (max-width:768px){
+      .nav-toggle{display:flex}
+      .links-git{display:none; flex-direction:column; gap:8px; background:var(--rosa); padding:12px}
+    }
+  </style>
+</html>
+ 
