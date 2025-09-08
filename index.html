@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- cabeçalho -->
+  <!-- Cabeçalho -->
   <header class="header-git">
     <div class="container menu-git">
       <a href="#" class="logo-git">
@@ -45,12 +45,30 @@
     </div>
   </section>
 
+  <!-- Roteiros -->
+  <section class="sessao-git" id="roteiros">
+    <div class="container">
+      <h2>Os roteiros de aulas</h2>
+      <div class="cards-git">
+        <a href="https://www.notion.so/Roteiro-01-B-sico-267d302f6f578041a27ce0a73c7622fa?source=copy_link" target="_blank"
+           class="card-btn" style="background-image:url('imagens/roteiro_01.png')"></a>
+        <a href="https://www.notion.so/Roteiro-02-267d302f6f57808392a4dfd4d05d4273?source=copy_link" target="_blank"
+           class="card-btn" style="background-image:url('imagens/roteiro_02.png')"></a>
+        <a href="https://www.notion.so/Roteiro-03-267d302f6f578074b796d4771e818e40?source=copy_link" target="_blank"
+           class="card-btn" style="background-image:url('imagens/roteiro_03.png')"></a>
+        <a href="https://www.notion.so/Roteiro-04-267d302f6f5780678559fc4a48457260?source=copy_link" target="_blank"
+           class="card-btn" style="background-image:url('imagens/roteiro_04.png')"></a>
+      </div>
+    </div>
+  </section>
+
   <!-- rodapé -->
- <footer class="rodape-git">
+  <footer class="rodape-git">
     <div class="container">
       <p class="informacao-git">© <span id="year"></span> Diana Alves Zamprogna <br>Aluna do quarto período do curso de Sistemas de Informação da universidade MaterDei</p>
     </div>
   </footer>
+
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -87,7 +105,7 @@
       padding-right:40px;
     }
 
-    /* botões principais */
+    /* Botões principais */
     .btn-primary{
       background:var(--bordo); color:var(--bege);
       padding:10px 20px; border-radius:40px;
@@ -102,7 +120,7 @@
     }
     .btn-roteiro:hover,.btn-relatorio:hover{opacity:.85}
 
-    /* cabeçalho */
+    /* Cabeçalho */
     .header-git{
       padding:0 40px;
       background:var(--bege); position:sticky; top:0; z-index:10;
@@ -127,6 +145,24 @@
     .intro-texto h1 .highlight{color:var(--bordo)}
     .intro-imagem{width:100%; height:400px; border-radius:var(--radius); background:var(--cinza-claro); overflow:hidden}
 
+    /* Sessões */
+    .sessao-git{padding:70px 0}
+    .fundo-rosa{background:var(--rosa)}
+    h1,h2{margin-bottom:16px}
+    h1{font-size:36px}
+    h2{font-size:28px}
+
+    /* cards */
+    .cards-git{display:grid; grid-template-columns:repeat(2,1fr); grid-template-rows:repeat(2,1fr); gap:16px}
+    .card-btn{
+      background:no-repeat center; background-size:cover; border-radius:var(--radius);
+      box-shadow:var(--shadow); text-decoration:none; height:200px;
+      display:flex; align-items:flex-end; justify-content:center;
+      color:var(--bege); font-weight:bold; font-size:16px;
+      transition:transform .2s, box-shadow .2s
+    }
+    .card-btn:hover{transform:translateY(-5px); box-shadow:0 8px 24px rgba(0,0,0,.15)}
+
     /* rodapé */
     .rodape-git {
       background:var(--bordo);
@@ -141,6 +177,7 @@
 
     /* responsivo */
     @media (max-width:768px){
+      .intro-layout,.sobre-layout{grid-template-columns:1fr}
       .nav-toggle{display:flex}
       .links-git{display:none; flex-direction:column; gap:8px; background:var(--rosa); padding:12px}
     }
