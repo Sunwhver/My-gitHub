@@ -62,6 +62,27 @@
     </div>
   </section>
 
+    <!-- Sobre -->
+  <section class="sessao-git fundo-rosa" id="sobre">
+    <div class="container">
+      <div class="sobre-layout">
+        <img src="https://i.pinimg.com/originals/68/3a/43/683a43a11a8b31a71694544b4226d069.gif"
+             alt="gif de um gatinho branco lambendo a patinha">
+        <div>
+          <h2>Sobre o Git e GitHub</h2>
+          <p>
+            É um sistema de controle de versão distribuído (DVCS), criado para registrar todas as alterações de um projeto de forma organizada, segura e auditável. Em vez de apenas sobrescrever arquivos, o Git guarda “fotografias” chamadas commits, que permitem revisitar qualquer momento do desenvolvimento, comparar versões, criar caminhos alternativos de trabalho e integrá-los novamente sempre que necessário.
+          </p>
+          <br>
+          <p>
+            O Git nasceu da necessidade prática do Linux de lidar com contribuições em escala global. Sua arquitetura distribuída e rápida foi a chave do sucesso. Hoje, aliado ao GitHub e outras plataformas (GitLab, Bitbucket, Azure DevOps), ele é o padrão universal de versionamento de código.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- rodapé -->
   <footer class="rodape-git">
     <div class="container">
@@ -162,6 +183,17 @@
       transition:transform .2s, box-shadow .2s
     }
     .card-btn:hover{transform:translateY(-5px); box-shadow:0 8px 24px rgba(0,0,0,.15)}
+
+        /* sobre */
+    .sobre-layout{display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start}
+    .sobre-layout img{
+      width:100%;
+      max-width:400px;
+      max-height:500px;
+      object-fit:cover;
+      border-radius:var(--radius);
+      display:block
+    }
 
     /* rodapé */
     .rodape-git {
